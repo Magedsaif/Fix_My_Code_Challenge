@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Script that defines a square."""""
 
+
 class square():
     """Square class."""
 
@@ -9,13 +10,8 @@ class square():
 
     def __init__(self, *args, **kwargs):
         """Initialize Square class."""
-        if kwargs:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
-            if 'width' in kwargs.keys() and self.height != self.width:
-                self.height = self.width
-            if 'height' in kwargs.keys() and self.width != self.height:
-                self.width = self.height
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """Area of the square."""
@@ -28,6 +24,7 @@ class square():
     def __str__(self):
         """Print the square."""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
