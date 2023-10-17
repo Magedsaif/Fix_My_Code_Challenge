@@ -10,6 +10,7 @@ class Square():
 
     def __init__(self, *args, **kwargs):
         """Initialize Square class."""
+        self.width = kwargs.get('width', 0)
         for key, value in kwargs.items():
             setattr(self, key, value)
 
